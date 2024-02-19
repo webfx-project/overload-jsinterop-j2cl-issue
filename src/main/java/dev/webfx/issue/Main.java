@@ -12,9 +12,8 @@ public class Main {
     @GWT3EntryPoint
     public void entryPoint() {
         HTMLCanvasElement canvas = Js.cast(DomGlobal.document.createElement("canvas"));
-        CanvasRenderingContext2D ctx = Js.cast(canvas.getContext("2d"));
-        CanvasRenderingContext2DWithMatrixSetTransform ctx2 = (CanvasRenderingContext2DWithMatrixSetTransform) ctx;
-        ctx2.setTransform(DOMMatrixReadOnly.fromMatrix(DOMMatrixInit.create()));
+        CanvasRenderingContext2DWithMatrixSetTransform ctx = Js.cast(canvas.getContext("2d"));
+        ctx.setTransform(DOMMatrixReadOnly.fromMatrix(DOMMatrixInit.create()));
     }
 
 }
